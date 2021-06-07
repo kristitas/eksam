@@ -1,0 +1,252 @@
+
+
+body {
+    font-family: 'Archivo';
+}
+
+h1 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-weight: 900;
+    color: #FFF;
+}
+
+h2 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: #9abca7;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Archivo';
+    color: #272838;
+    font-weight: bold;
+    text-align: center;
+}
+h5 {
+    font-family: 'Archivo';
+    color: #272838;
+}
+p {
+    font-family: 'Archivo';
+    font-weight: thin;
+    color: #272838;
+    text-align: center;
+    font-size: 18px;
+}
+
+hr {
+    border: dotted #272838 6px;
+    border-bottom: none;
+    width: 7%;
+    margin: 20px auto;
+}
+
+#title {
+    background-color: #9abca7;
+}
+
+#features {
+    padding: 7% 5%;
+    padding-bottom: 1%;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.container-fluid {
+    padding: 3% 5% 2%;
+}
+
+.navbar {
+    padding: 0 3%;
+}
+
+.navbar-brand {
+    font-family: 'Archivo';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: 'Archivo';
+    color: #fff !important;
+}
+
+.dropdown-menu {
+    font-size: 1.2rem;
+    font-family: 'Archivo';
+    background-color: #9abca7;
+}
+
+.dropdown-item {
+    font-family: 'Archivo';
+    color: #fff;
+}
+
+.title-image {
+    width: 99%;
+    right: 30px;
+    margin: 10% 3% 0 3%;
+
+}
+.download-button {
+    margin: 10% 3% 9% 0;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 2%;
+}
+
+.icon {
+    color: #f5b841;
+    margin-bottom: 1rem;
+}
+
+.icon:hover {
+    color: #9abca7;
+}
+.hero-button {
+    border: 3px solid #fff;
+    color: #fff;
+    font-family: 'Archivo';
+    font-weight: bold;
+    width: 25%;
+    height: 45px;
+}
+.banner-text {
+    font-family: 'Archivo';
+    font-weight: bold;
+    color: #fff;
+}
+.carousel-caption {
+    margin-bottom: 50px;
+}
+@media only screen and (min-width : 1200px) {
+    .banner-text
+    {
+        top: 46%;
+    }
+}
+#press {
+    background-color: #9abca7;
+    text-align: center;
+    padding: 3%;
+}
+
+.press-logo {
+    width: 9%;
+    margin: 10px 10px 10px;
+}
+
+#pricing {
+    padding: 70px;
+    text-align: center;
+    color: #9abca7;
+    font-family: 'Archivo';
+}
+
+.pricing-column {
+    padding: 2% 1%;
+}
+
+#cta {
+    background-color: #9abca7;
+    color: #fff;
+    padding: 3% ;
+    text-align: center;
+}
+
+footer {
+    padding: 4px 4px;
+    text-align: center;
+    background-color: #f5b841;
+    color: #fff;
+}
+
+
+
+@media (max-width: 1028px) {
+    #title {
+        text-align: center;
+    }
+}
+
+.row {
+    padding: 0 3%;
+    margin-bottom: 1%;
+}
+
+.text-reset {
+    margin: 10px 10px 25px;
+}
+.footer-text {
+    color: #fff;
+}
+.details {
+    border: 3px solid #f5b841;
+    font-family: 'Archivo';
+    font-weight: bold;
+    color: #272838;
+    width: 100%;
+    height: auto;
+
+}
+
+.cart {
+
+    background-color: #f5b841;
+    color: #31393c;
+    font-family: 'Archivo';
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 900;
+    width: 100%;
+    height: 39px;
+    padding-top: 9px;
+}
+
+.card {
+    width: 100%;
+}
+
+.card-body {
+    width: 90%;
+}
+
+.btn {
+    border-radius: 0;
+
+}
+
+.img-thumbnail {
+    border: none;
+}
+
+.card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.cta-image {
+
+    margin: 3% 3% 0 3%;
+}
+.cta-text {
+    margin-top: 130px;
+    padding-left: 10px;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
