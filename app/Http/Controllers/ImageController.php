@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Burger;
+use App\Models\Image;
 use Illuminate\Http\Request;
 
-class BurgerController extends Controller
+class ImageController extends Controller
 {
-
-}
     /**
      * Display a listing of the resource.
      *
@@ -16,8 +14,7 @@ class BurgerController extends Controller
      */
     public function index()
     {
-    $burgers = Burger::all();
-    return response()->view('burgers.index' , compact('burgers'));
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class BurgerController extends Controller
      */
     public function create()
     {
-        return response()->view('burgers.create');
+        //
     }
 
     /**
@@ -44,10 +41,10 @@ class BurgerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Burger  $burger
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function show(Burger $burger)
+    public function show(Image $image)
     {
         //
     }
@@ -55,10 +52,10 @@ class BurgerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Burger  $burger
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function edit(Burger $burger)
+    public function edit(Image $image)
     {
         //
     }
@@ -67,10 +64,10 @@ class BurgerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Burger  $burger
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Burger $burger)
+    public function update(Request $request, Image $image)
     {
         //
     }
@@ -78,10 +75,10 @@ class BurgerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Burger  $burger
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Burger $burger)
+    public function destroy(Image $image)
     {
         //
     }
