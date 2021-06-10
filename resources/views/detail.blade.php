@@ -5,6 +5,12 @@ body {
 background: #9abca7;
 font-family: 'Archivo';
 }
+h2 {
+text-align: center;
+font-family: 'Archivo';
+font-weight: bold;
+margin-top: 20px;
+}
 
 h3 {
 font-family: 'Archivo';
@@ -19,18 +25,22 @@ color: #272838;
 
 p {
 color: #272838;
+font-size: 16px;
 }
 
 #title {
 background-color: #9abca7;
 }
-
+.header {
+padding: 3% 3% 2%;
+}
 .container-fluid {
-padding: 3% 5% 2%;
+padding-bottom: 2%;
+font-size: 14px;
 }
 
 .product-card {
-padding: 6% 5% 2%;
+padding: 2% 2% 2%;
 background-color: #fff;
 }
 
@@ -42,10 +52,13 @@ padding: 0 3%;
 font-family: 'Archivo';
 font-size: 2.5rem;
 font-weight: bold;
+    margin-left: 3%;
 }
-
+.navbar-nav {
+    margin-right: 3%;
+}
 .nav-item {
-padding: 0 18px;
+padding: 0 7px;
 }
 
 .nav-link {
@@ -102,7 +115,8 @@ padding: 3%;
 
 .newsletter {
 font-family: 'Archivo';
-padding: 50px 0;
+height: 200px;
+padding: 40px;
 background: #9abca7;
 }
 
@@ -117,6 +131,7 @@ z-index: 2;
 .newsletter .content h3 {
 color: #272838;
 margin-bottom: 40px;
+margin-top: 40px;
 }
 
 .newsletter .content .form-control {
@@ -131,12 +146,24 @@ min-height: 50px;
 border-radius: 0;
 background: #272838;
 color: #fff;
-font-weight: blod;
+}
+.detail-banner {
+display: block;
+margin: 0 auto;
+max-width: 100%;
+}
+.card-content {
+    padding-left: 3%;
+}
+.pt-1 {
+    margin-right: 13%;
 }
 </style>
+
 <head>
     <meta charset="utf-8">
-    <title>PÄRNU BURGER</title>
+    <title>NEHATU BURGER</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;800&family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -162,29 +189,60 @@ font-weight: blod;
         });
     </script>
 </head>
+
 <body>
 <section id="title">
-    <div class="container-fluid">
+    <div class="header container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">
-                <img src="images/logovalgega.png" width="280" height="110" class="d-inline-block" alt="logo"></a>
+            <a class="navbar-brand" href="/">
+                <img src="images/nehatu_logo_valgega.png" width="220" height="75" class="d-inline-block" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Avaleht</a>
+                        <a class="nav-link" href="/">Avaleht</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#pricing">Menüü</a>
+                        <a class="nav-link" href="/">Menüü</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Kontakt</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="signin.html"><i class="far fa-user"></i> Sisene</a>
-                    </li>
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Logi sisse') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registreeri') }}</a>
+                            </li>
+                        @endif
+                    @else
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('profile') }}">
+                                    {{ __('Profiil') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logi välja') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i> EST
                         </a>
@@ -201,8 +259,14 @@ font-weight: blod;
         </nav>
     </div>
 </section>
-<section>
+<section class="banner">
+    <img src="images/detail_banner.png" class="detail-banner" alt="Responsive image">
+</section>
+<section class="card-content">
     <div class="product-card container-fluid">
+        <div class=" container-fluid">
+            <u><a href="index.html" class="text-muted">Avaleht</a></u><span class="divider">/</span>Topelt juustuburger
+        </div>
         <section class="mb-5">
             <div class="row">
                 <div class="col-md-6 mb-4 mb-md-0">
@@ -216,6 +280,8 @@ font-weight: blod;
                     <br>
                     <p><span class="mr-1"><strong>7,90 €</strong></span></p>
                     <p class="pt-1">Meie topelt veiseburger koosneb kahest leegil grillitud 100% veisepihvist, mida täiendavad isukas portsion suitsupeekonit, sulanud juust, ketšup ja kreemjas majonees pehmel seesamiseemnekuklil.</p>
+                    <p><img class="gluten-logo" src="images/gluten.png" height="22" width="22" alt="gluten_free"> - Gluteenivaba
+                    <img class="gluten-logo" src="images/pepper.svg" height="22" width="22" alt="pepper"><img class="gluten-logo" src="images/pepper.svg" height="22" width="22" alt="pepper"> - Teravus </p>
                     <div class="table-responsive">
                     </div>
                     <hr>
@@ -256,23 +322,25 @@ font-weight: blod;
             </div>
         </section>
     </div>
-    <section class="newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="content">
-                        <h5>LIITU MEIE UUDISKIRJAGA</h5>
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Sisesta oma e-posti aadress">
-                            <span class="input-group-btn">
+
+
+</section>
+<section class="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="content">
+                    <h2>Liitu meie uudiskirjaga</h2>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Sisesta oma e-posti aadress">
+                        <span class="input-group-btn">
                   <button class="sub-btn" type="submit"><i class="fas fa-arrow-right"></i></button>
                 </span>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </section>
 <footer class="text-center text-lg-start">
     <section id="footer">
@@ -280,7 +348,7 @@ font-weight: blod;
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <img src="images/logovalgega.png" width="140" height="55" class="d-inline-block" alt="logo">
+                     <a href="/">  <img src="images/nehatu_logo_valgega.png" width="140" height="48" class="d-inline-block" alt="logo"></a>
                     </h6>
                     <p class="footer-text">
                         Oleme avatud: <br> E-R 11.00 - 20.00 <br> L 12.00 - 23.00 <br> P Suletud
@@ -288,32 +356,30 @@ font-weight: blod;
                 </div>
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <p class="footer-text">
-                        <a href="index.html#features" class="text-reset">Meist</a>
+                        <a href="/" class="text-reset">Meist</a>
                     </p>
                     <p class="footer-text">
-                        <a href="index.html#pricing" class="text-reset">Menüü</a>
+                        <a href="/" class="text-reset">Menüü</a>
                     </p>
                     <p class="footer-text">
-                        <a href="index.html#cta" class="text-reset">Laadi alla</a>
+                        <a href="/" class="text-reset">Laadi alla</a>
                     </p>
-                    <p class="footer-text">
-                        <a href="signin.html" class="text-reset">Sisene</a>
-                    </p>
+
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <p class="footer-text"><i class="fas fa-home me-3"></i> Supeluse tn 1, Pärnu linn, Pärnu linn, 80014</p>
+                    <p class="footer-text"><i class="fas fa-home me-3"></i> Kopli tn 1, Tallinn, 10412</p>
                     <p class="footer-text">
                         <i class="fas fa-envelope me-3"></i>
-                        pburger@gmail.com
+                        nehatu@gmail.com
                     </p>
                     <p class="footer-text"><i class="fas fa-phone me-3"></i> + 372 567 88</p>
-                    <a href="" class="me-4 text-reset">
+                    <a href="https://www.facebook.com/" class="me-4 text-reset">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="" class="me-4 text-reset">
+                    <a href="https://www.instagram.com/" class="me-4 text-reset">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="" class="me-4 text-reset">
+                    <a href="https://www.tripadvisor.com/" class="me-4 text-reset">
                         <i class="fab fa-tripadvisor"></i>
                     </a>
                     </a>
@@ -322,9 +388,11 @@ font-weight: blod;
         </div>
     </section>
     <div class="text-center p-4">
-        © 2021 Copyright: Pärnu Burger
+        © 2021 Copyright: Nehatu Burger
     </div>
 </footer>
 </body>
+
 </html>
+
 

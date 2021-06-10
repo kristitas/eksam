@@ -1,259 +1,279 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+
 <style>
     body {
-    font-family: 'Archivo';
+        font-family: 'Archivo';
+        background-color: #f3f3f3;
     }
 
     h1 {
-    font-family: 'Archivo';
-    font-weight: bold;
-    font-size: 3.5rem;
-    line-height: 1.5;
-    font-weight: 900;
-    color: #FFF;
+        font-family: 'Archivo';
+        font-weight: bold;
+        font-size: 3.5rem;
+        line-height: 1.5;
+        font-weight: 900;
+        color: #FFF;
     }
 
     h2 {
-    font-family: 'Archivo';
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 1.5;
-    color: #9abca7;
-    text-align: center;
+        font-family: 'Archivo';
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 1.5;
+        color: #9abca7;
+        text-align: center;
     }
 
     h3 {
-    font-family: 'Archivo';
-    color: #272838;
-    font-weight: bold;
-    text-align: center;
+        font-family: 'Archivo';
+        color: #272838;
+        font-weight: bold;
+        text-align: center;
     }
     h5 {
-    font-family: 'Archivo';
-    color: #272838;
+        font-family: 'Archivo';
+        color: #272838;
     }
     p {
-    font-family: 'Archivo';
-    font-weight: thin;
-    color: #272838;
-    text-align: center;
-    font-size: 18px;
+        font-family: 'Archivo';
+        font-weight: thin;
+        color: #272838;
+        text-align: center;
+        font-size: 18px;
     }
 
     hr {
-    border: dotted #272838 6px;
-    border-bottom: none;
-    width: 7%;
-    margin: 20px auto;
+        border: dotted #272838 6px;
+        border-bottom: none;
+        width: 7%;
+        margin: 20px auto;
     }
 
     #title {
-    background-color: #9abca7;
+        background-color: #9abca7;
     }
 
     #features {
-    padding: 7% 5%;
-    padding-bottom: 1%;
-    background-color: #fff;
-    position: relative;
-    z-index: 1;
+        padding: 7% 5%;
+        padding-bottom: 1%;
+        background-color: #f3f3f3;
+        position: relative;
+        z-index: 1;
     }
 
     .container-fluid {
-    padding: 3% 5% 2%;
+        padding: 3% 5% 2%;
     }
 
     .navbar {
-    padding: 0 3%;
+        padding: 0 3%;
     }
 
     .navbar-brand {
-    font-family: 'Archivo';
-    font-size: 2.5rem;
-    font-weight: bold;
+        font-family: 'Archivo';
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-left: 3%;
     }
-
+    .navbar-nav {
+        margin-right: 3%;
+    }
     .nav-item {
-    padding: 0 18px;
+        padding: 0 7px;
     }
 
     .nav-link {
-    font-size: 1.2rem;
-    font-family: 'Archivo';
-    color: #fff !important;
+        font-size: 1.2rem;
+        font-family: 'Archivo';
+        color: #fff !important;
     }
 
     .dropdown-menu {
-    font-size: 1.2rem;
-    font-family: 'Archivo';
-    background-color: #9abca7;
+        font-size: 1.2rem;
+        font-family: 'Archivo';
+        background-color: #9abca7;
     }
 
     .dropdown-item {
-    font-family: 'Archivo';
-    color: #fff;
+        font-family: 'Archivo';
+        color: #fff;
     }
 
     .title-image {
-    width: 99%;
-    right: 30px;
-    margin: 10% 3% 0 3%;
+        width: 99%;
+        right: 30px;
+        margin: 10% 3% 0 3%;
 
     }
     .download-button {
-    margin: 10% 3% 9% 0;
+        margin: 10% 3% 9% 0;
     }
 
     .feature-box {
-    text-align: center;
-    padding: 2%;
+        text-align: center;
+        padding: 2%;
     }
 
     .icon {
-    color: #f5b841;
-    margin-bottom: 1rem;
+        color: #f5b841;
+        margin-bottom: 1rem;
     }
 
     .icon:hover {
-    color: #9abca7;
+        color: #9abca7;
     }
     .hero-button {
-    border: 3px solid #fff;
-    color: #fff;
-    font-family: 'Archivo';
-    font-weight: bold;
-    width: 25%;
-    height: 45px;
+        border: 3px solid #fff;
+        color: #fff;
+        font-family: 'Archivo';
+        font-weight: bold;
+        font-size: 20px;
+        width: 25%;
+        height: 45px;
     }
     .banner-text {
-    font-family: 'Archivo';
-    font-weight: bold;
-    color: #fff;
+        font-family: 'Archivo';
+        font-weight: bold;
+        color: #fff;
     }
     .carousel-caption {
-    margin-bottom: 50px;
+        margin-bottom: 50px;
     }
     @media only screen and (min-width : 1200px) {
-    .banner-text
-    {
-    top: 46%;
-    }
+        .banner-text
+        {
+            top: 46%;
+        }
     }
     #press {
-    background-color: #9abca7;
-    text-align: center;
-    padding: 3%;
+        background-color: #f5b841;
+        text-align: center;
+        padding: 3%;
     }
 
     .press-logo {
-    width: 9%;
-    margin: 10px 10px 10px;
+        width: 10%;
+        margin: 2px 2px 2px;
     }
 
     #pricing {
-    padding: 70px;
-    text-align: center;
-    color: #9abca7;
-    font-family: 'Archivo';
+        padding: 70px;
+        text-align: center;
+        color: #9abca7;
+        font-family: 'Archivo';
     }
 
     .pricing-column {
-    padding: 2% 1%;
+        padding: 2% 1%;
     }
 
     #cta {
-    background-color: #9abca7;
-    color: #fff;
-    padding: 3% ;
-    text-align: center;
+        background-color: #9abca7;
+        color: #fff;
+        padding: 3% ;
+        text-align: center;
     }
 
     footer {
-    padding: 4px 4px;
-    text-align: center;
-    background-color: #f5b841;
-    color: #fff;
+        padding: 4px 4px;
+        text-align: center;
+        background-color: #f5b841;
+        color: #fff;
     }
 
 
 
     @media (max-width: 1028px) {
-    #title {
-    text-align: center;
-    }
+        #title {
+            text-align: center;
+        }
     }
 
     .row {
-    padding: 0 3%;
-    margin-bottom: 1%;
+        padding: 0 3%;
+        margin-bottom: 1%;
     }
 
     .text-reset {
-    margin: 10px 10px 25px;
+        margin: 10px 10px 25px;
     }
     .footer-text {
-    color: #fff;
+        color: #fff;
     }
     .details {
-    border: 3px solid #f5b841;
-    font-family: 'Archivo';
-    font-weight: bold;
-    color: #272838;
-    width: 100%;
-    height: auto;
+        border: 2px solid #f5b841;
+        font-family: 'Archivo';
+        font-weight: bold;
+        color: #272838;
+        width: 100%;
+        height: auto;
 
     }
 
     .cart {
 
-    background-color: #f5b841;
-    color: #31393c;
-    font-family: 'Archivo';
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 900;
-    width: 100%;
-    height: 39px;
-    padding-top: 9px;
+        background-color: #f5b841;
+        color: #31393c;
+        font-family: 'Archivo';
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 900;
+        width: 100%;
+        height: 39px;
+        padding-top: 9px;
     }
 
-    .card {
-    width: 100%;
-    }
 
     .card-body {
-    width: 90%;
+        width: 90%;
     }
 
     .btn {
-    border-radius: 0;
+        border-radius: 0;
 
     }
 
     .img-thumbnail {
-    border: none;
+        border: none;
     }
 
     .card {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
-    border-radius: 5px;
-    padding-bottom: 10px;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        padding-bottom: 10px;
     }
     .cta-image {
 
-    margin: 3% 3% 0 3%;
+        margin: 3% 3% 0 3%;
     }
     .cta-text {
-    margin-top: 130px;
-    padding-left: 10px;
+        padding-left: 10px;
+        padding-top: 120px;
     }
+    .gluten-logo {
+        margin-left: 5px;
+    }
+.ingredients {
+    font-size: 12px;
+    align-items: first;
+    color: #272838;
+    margin-bottom: 10px;
+    font-family: 'Archivo';
+}
+.footer-logo {
+    margin-left: 80px;
+}
+.socials {
+    margin-left: 80px;
+}
 </style>
 <head>
     <meta charset="utf-8">
-    <title>PÄRNU BURGER</title>
+    <title>NEHATU BURGER</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;800&family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -268,7 +288,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">
-                <img src="images/logovalgega.png" width="230" height="90" class="d-inline-block" alt="logo"></a>
+                <img src="images/nehatu_logo_valgega.png" width="230" height="75" class="d-inline-block" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -338,7 +358,7 @@
                 <img src="images/banner1.jpg" class="img-fluid" alt="Responsive image">
                 <div class="carousel-caption">
                     <h3 class="banner-text display-4 d-none d-lg-block">Kõik pihvid, kastmed, majoneesid ja ketšupid valmistame värskest toorainest kohapeal ise!</h3>
-                    <a class="hero-button btn btn-outline-light" type="button" href="detail">Menüü</a>
+                    <a class="hero-button btn btn-outline-light" type="button" href="detail">MENÜÜ</a>
                 </div>
             </div>
             <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -372,7 +392,6 @@
     <div class="row">
         <div class="col-lg-8">
             <h2>Meist</h2>
-            <hr>
             <p>Kõik meie burgerid on tehtud kohalikust toorainest ning kasutatud originaalretseptiga kastmeid.</p>
             <div class="row">
                 <div class="feature-box col-lg-4">
@@ -405,8 +424,10 @@
 </section>
 <section id="pricing">
     <h2>Menüü</h2>
-    <hr>
     <p>Kõik meie burgerid on tehtud kohalikust toorainest ning kasutatud originaalretseptiga kastmeid.</p>
+    <p><img class="gluten-logo" src="images/gluten.png" height="22" width="22" alt="gluten_free"> - Gluteenivaba &nbsp;<img class="gluten-logo" src="images/vegetarian.png" height="22" width="22" alt="vegetarian"> - Taimetoitlastele </p>
+    <p><img class="gluten-logo" src="images/carrot.png" height="22" width="22" alt="vegan"> - Vegan &nbsp;<img class="gluten-logo" src="images/pepper.svg" height="22" width="22" alt="vegetarian"> - Teravus </p>
+    <div class="row">
     <div class="row">
         @foreach($burgers as $burger)
         <div class="pricing-column col-lg-4 col-md-6">
@@ -414,7 +435,8 @@
                 <div class="card-body text-center mx-auto">
                     <div class='cvp'>
                         <h5 class="card-title font-weight-bold">{{$burger->name}}</h5>
-                        <p class="card-text">{{$burger->price}} €</p> <a href="detail" class="btn details px-auto btn-light">ROHKEM TEAVET</a><br /> <a href="detail" class="btn cart px-auto btn-light">OSTA</a>
+                        <div class="ingredients">{{$burger->ingredients}} </div>
+                        <p class="card-text">{{$burger->price}} €</p>  <a href="detail" class="btn btn-light btn-md mr-1 mb-2 btn-outline-dark">ROHKEM TEAVET</a> <a href="detail" class="btn btn-light btn-md mr-1 mb-2" style="background-color: #f5b841;">OSTA</a>
                     </div>
                 </div>
             </div>
@@ -428,7 +450,7 @@
             <img class="img-fluid cta-image" src="images/cta_photo.jpg" alt="eatingburger">
         </div>
         <div class="cta-text col-lg-6">
-            <h3>Laadi alla Pärnu Burger app, kust leiad meie kõige paremad pakkumised.</h3>
+            <h3>Laadi alla Nehatu Burger app, kust leiad meie kõige paremad pakkumised.</h3>
             <a class="download-button btn btn-lg btn-dark" href="https://www.apple.com/app-store/" type="button"><i class="fab fa-apple"></i> App Store</a>
             <a class="download-button btn btn-lg btn-outline-dark" href="https://play.google.com/store" type="button"><i class="fab fa-google-play"></i> Google Play</a>
         </div>
@@ -440,7 +462,7 @@
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <img src="images/logovalgega.png" width="140" height="55" class="d-inline-block" alt="logo">
+                        <img src="images/nehatu_logo_valgega.png" width="140" height="48" class="footer-logo d-inline-block" alt="logo">
                     </h6>
                     <p class="footer-text">
                         Oleme avatud: <br> E-R 11.00 - 20.00 <br> L 12.00 - 23.00 <br> P Suletud
@@ -456,36 +478,34 @@
                     <p class="footer-text">
                         <a href="#cta" class="text-reset">Laadi alla</a>
                     </p>
-                    <p class="footer-text">
-                        <a href="#!" class="text-reset">Sisene</a>
-                    </p>
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <p class="footer-text"><i class="fas fa-home me-3"></i> Supeluse tn 1, Pärnu linn, Pärnu linn, 80014</p>
+                    <p class="footer-text"><i class="fas fa-home me-3"></i> Kopli tn 1, Tallinn, 10412</p>
                     <p class="footer-text">
                         <i class="fas fa-envelope me-3"></i>
-                        pburger@gmail.com
+                        nehatu@gmail.com
                     </p>
                     <p class="footer-text"><i class="fas fa-phone me-3"></i> + 372 567 88</p>
-                    <a href="" class="me-4 text-reset">
+                    <div class="socials">
+                    <a href="https://www.facebook.com/" class="me-4 text-reset">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="" class="me-4 text-reset">
+                    <a href="https://www.instagram.com/" class="me-4 text-reset">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="" class="me-4 text-reset">
+                    <a href="https://www.tripadvisor.com/" class="me-4 text-reset">
                         <i class="fab fa-tripadvisor"></i>
                     </a>
-                    </a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
     <div class="text-center p-4">
-        © 2021 Copyright: Pärnu Burger
+        © 2021 Copyright: Nehatu Burger
     </div>
 </footer>
-<script src="/js/app.js"></script>
 </body>
-</html>
 
+</html>

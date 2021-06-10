@@ -19,6 +19,7 @@ class CreateBurgersTable extends Migration
             $table->enum('size', ['SMALL' , 'MEDIUM' , 'LARGE']);
             $table->text('description');
             $table->integer('price');
+            $table->enum('ingredients', ['VEGE' , 'VEGETARIAN', 'CHILLI', 'GLUTEN FREE']);
             $table->timestamps();
         });
     }

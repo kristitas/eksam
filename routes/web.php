@@ -30,3 +30,5 @@ Route::get('detail', function()
 {
     return view('detail');
 });
+
+

@@ -24,6 +24,7 @@ class BurgerFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'size' => $this->faker->randomElement(['SMALL' , 'MEDIUM' , 'LARGE']),
+            'ingredients' => $this->faker->randomElement(['VEGE' , 'VEGETARIAN', 'CHILLI', 'GLUTEN FREE']),
             'description' => $this->faker->sentences('3', true),
             'price' => $this->faker->randomDigit(),
         ];
